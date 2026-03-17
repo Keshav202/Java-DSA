@@ -1,0 +1,42 @@
+import java.util.*;
+class functionOverloading {
+    public static int sum (int a, int b) {
+        return a+b;
+    }
+
+    public static int sum (int a, int b, int c){
+        return a+b+c;
+    }
+
+    public static float sum(float a, float b){
+        return a+b;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter b ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter c ");
+        int c = sc.nextInt();
+
+        int sum = sum(a,b);
+        System.out.println("a + b = " + sum);
+
+        int sum2 = sum(a,b,c);
+        System.out.println("a + b + c = " + sum2);
+
+        System.out.println("Enter first float value ");
+        float num1 = sc.nextFloat();
+
+        System.out.println("Enter 2nd float value ");
+        float num2 = sc.nextFloat();
+
+        float sum3 = sum(num1,num2);
+        System.out.println(sum3);
+
+
+    }
+}
