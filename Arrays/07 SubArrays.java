@@ -2,6 +2,7 @@ import java.util.Scanner;
 class Sub_Arrays {
 
     public static void sub_array(int array[]){
+        int tot_SubArr = 0;
         for (int i=0; i< array.length; i++){
             int start = i;
             for (int j=i; j< array.length; j++){
@@ -10,10 +11,12 @@ class Sub_Arrays {
                 for (int k=start; k<=end; k++){
                     System.out.print(array[k] + " ");
                 }
+                tot_SubArr++;
                 System.out.println("]");
             }
             System.out.println();
         }
+        System.out.print("Total SubArrays = " + tot_SubArr);
     }
 
     public static void main(String[] args) {
