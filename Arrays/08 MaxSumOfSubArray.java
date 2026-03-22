@@ -21,6 +21,21 @@ class Max_Sum_SubArray {
         System.out.print("Maximum Sum of SubArray = " + max_sum);
     }
 
+    public static void sum_using_Kadane(int arr[]){
+        int curr_Sum = 0;
+        int max_Sum = Integer.MIN_VALUE;
+
+        for (int i=0; i< arr.length; i++){
+            curr_Sum += arr[i];
+            if (curr_Sum<0){
+                curr_Sum = 0;
+            }
+            max_Sum = Math.max(curr_Sum,max_Sum);
+        }
+        System.out.println("Maximum sum is : " + max_Sum);
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int array[] = new int[5];
@@ -31,5 +46,6 @@ class Max_Sum_SubArray {
         }
 
         sum_of_SubArray(array);
+        sum_using_Kadane(array);
     }
 }
